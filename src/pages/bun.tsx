@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import Instructions from '@/components/dom/Instructions'
 
-const Blob = dynamic(() => import('@/components/canvas/Blob'), { ssr: false })
+const Bun = dynamic(() => import('@/components/canvas/Bun'), { ssr: false })
 
 export default function Page(props) {
   return (
@@ -13,8 +13,8 @@ export default function Page(props) {
   )
 }
 
-Page.canvas = (props) => <Blob route='/' />
+Page.canvas = (props) => <Bun route='/' />
 
 export async function getStaticProps() {
-  return { props: { title: 'Blob' } }
+  return { props: { title: 'Bun' } }
 }
